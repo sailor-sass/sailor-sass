@@ -4,7 +4,10 @@
   "description": "TailwindCSS implemented in Sass.",
   "main": "lib/_index.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass -I lib/ ./lib/:./build/",
+    "build:watch": "npm run build -- --watch",
+    "test": "sass -I node_modules/ -I lib/ ./test/:./build/test/",
+    "test:watch": "npm run test -- --watch"
   },
   "keywords": [
     "atomic-css",
@@ -21,6 +24,7 @@
   },
   "devDependencies": {
     "@semantic-release/git": "^9.0.0",
+    "sass-true": "^6.0.1",
     "semantic-release": "^17.3.7",
     "semantic-release-gitmoji": "^1.3.4"
   },

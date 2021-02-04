@@ -1,0 +1,9 @@
+@use "sass-true" as *;
+
+@include describe("Simple test") {
+  @include it("Passes") {
+    @include assert-equal(true, true);
+  }
+}
+
+@include report;
