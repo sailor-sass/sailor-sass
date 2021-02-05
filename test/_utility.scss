@@ -1,0 +1,55 @@
+@use 'sass-true' as *;
+@use 'lib/utility' as *;
+
+@include describe('str-replace') {
+  @include it('Replaces target string with given replacement') {
+    @include assert-equal(
+      str-replace('Hello, World!', 'Hello', 'Goodbye'),
+      'Goodbye, World!'
+    );
+  }
+}
+
+@include describe('css-escape') {
+  @include it('Escapes decimals in numbers') {
+    @include assert-equal(
+      css-escape(0.5),
+      '0\\.5'
+    );
+  }
+
+  @include it('Escapes periods in strings') {
+    @include assert-equal(
+      css-escape('Hi.'),
+      'Hi\\.'
+    );
+  }
+
+  @include it('Escapes colons in strings') {
+    @include assert-equal(
+      css-escape('md:'),
+      'md\\:'
+    );
+  }
+
+  @include it('Escapes slashes in strings') {
+    @include assert-equal(
+      css-escape('1/2'),
+      '1\\/2'
+    );
+  }
+
+  @include it('Escapes percent-signs in numbers') {
+    @include assert-equal(
+      css-escape(42%),
+      '42\\%'
+    );
+  }
+
+  @include it('Escapes hashes in colors') {
+    @include assert-equal(
+      css-escape(#fffaaa),
+      '\\#fffaaa'
+    );
+  }
+}

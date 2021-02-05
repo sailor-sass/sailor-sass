@@ -1,0 +1,27 @@
+@function str-replace($string, $target, $replacement) {
+  $index: str-index($string, $target);
+
+  @if $index {
+    @return
+      str-slice($string, 1, $index - 1)
+      + $replacement
+      + str-replace(
+        str-slice($string, $index + str-length($target)),
+        $target,
+        $replacement
+      );
+  }
+  @else {
+    @return $string;
+  }
+}
+
+@function css-escape($value) {
+  $value: #{$value};
+  
+  @each $char in ('.', ':', '/', '%', '#') {
+    $value: str-replace($value, $char, '\\#{$char}');
+  }
+
+  @return $value;
+}

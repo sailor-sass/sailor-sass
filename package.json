@@ -6,7 +6,7 @@
   "scripts": {
     "build": "sass -I lib/ ./lib/:./build/",
     "build:watch": "npm run build -- --watch",
-    "test": "sass -I node_modules/ -I lib/ ./test/:./build/test/",
+    "test": "sass -I node_modules/ -I ./ ./test/:./build/test/",
     "test:watch": "npm run test -- --watch",
     "lint": "stylelint lib/**/*.scss",
     "lint:fix": "npm run lint -- --fix"
