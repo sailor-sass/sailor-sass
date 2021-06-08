@@ -1,0 +1,123 @@
+// grave: (v) a nautical term meaning 'to clean a ship's bottom.'
+// This file performs a reset and nomralization of styles.
+
+/// RESET
+
+html {
+  box-sizing: border-box;
+
+  font-size: 100%;
+
+  position: relative;
+  z-index: 0;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    position: inherit;
+    z-index: inherit;
+  }
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: none;
+  vertical-align: baseline;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  appearance: none;
+  border-radius: 0;
+}
