@@ -1,20 +1,5 @@
 @import 'grave';
 
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-  position: relative;
-  z-index: 0;
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-    position: inherit;
-    z-index: 0;
-  }
-}
-
 body {
   font-family: Helevetica, system-ui, sans-serif;
 }
