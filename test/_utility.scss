@@ -8,6 +8,13 @@
       'Goodbye, World!'
     );
   }
+
+  @include it('Replaces all instances of the target with the given replacement') {
+    @include assert-equal(
+      str-replace('Hello, World!', 'l', '1'),
+      'He11o, Wor1d!'
+    );
+  }
 }
 
 @include describe('css-escape') {
