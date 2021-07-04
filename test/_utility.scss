@@ -28,7 +28,7 @@
   @include it('Escapes decimals in numbers') {
     @include assert-equal(
       css-escape(0.5),
-      '0\\.5'
+      '\\30\\.5'
     );
   }
 
@@ -49,14 +49,14 @@
   @include it('Escapes slashes in strings') {
     @include assert-equal(
       css-escape('1/2'),
-      '1\\/2'
+      '\\31\\/2'
     );
   }
 
   @include it('Escapes percent-signs in numbers') {
     @include assert-equal(
       css-escape(42%),
-      '42\\%'
+      '\\342\\%'
     );
   }
 
@@ -64,6 +64,13 @@
     @include assert-equal(
       css-escape(#fffaaa),
       '\\#fffaaa'
+    );
+  }
+
+  @include it('Escapes leading numbers') {
+    @include assert-equal(
+      css-escape('2xl:container'),
+      '\\32xl\\:container'
     );
   }
 }

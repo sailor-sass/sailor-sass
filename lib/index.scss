@@ -1,4 +1,7 @@
+@use 'sass:selector';
+
 @use 'grave';
+@use 'utility' as *;
 
 body {
   font-family: Helevetica, system-ui, sans-serif;
@@ -11,4 +14,18 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+}
+
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1536px,
+);
+
+@each $breakpoint, $width in $breakpoints {
+  .#{css-escape('#{$breakpoint}:container')} {
+    max-width: $width;
+  }
 }
