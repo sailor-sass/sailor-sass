@@ -19,7 +19,7 @@
     "tailwind-css",
     "tailwindcss"
   ],
-  "author": "Joseph R Miles <joe@jrm.dev> (https://jrm.dev)",
+  "author": "February Miles <february.miles@proton.me>",
   "license": "MIT",
   "dependencies": {
     "sass": "^1.32.6"
