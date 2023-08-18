@@ -22,10 +22,10 @@
   "author": "Joseph R Miles <joe@jrm.dev> (https://jrm.dev)",
   "license": "MIT",
   "dependencies": {
-    "@semantic-release/commit-analyzer": "^10.0.1",
     "sass": "^1.32.6"
   },
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/git": "^10.0.1",
     "sass-true": "^6.0.1",
     "semantic-release": "^21.0.7",
